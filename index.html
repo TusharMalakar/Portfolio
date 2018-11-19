@@ -4,11 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+.mySlides {display:none;}
 </style>
+
+
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
 <!-- Sidebar/menu -->
@@ -35,6 +40,38 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <a href="https://www.linkedin.com/in/tushar-malakar-abab17139/ " onclick="w3_close()" ><i class="fa fa-linkedin  " style="font-size:25px;color:#0772BC"></i></a>
     <a href="https://twitter.com/TusharNy" onclick="w3_close()" ><i class="fa fa-twitter  " style="font-size:25px;color:#24A1F8"></i></a>
   </div>
+  
+  <div> </div>
+  
+  <div class="w3-content w3-display-container">
+  <img class="mySlides" src="CS.png." style="width:100%">
+  <img class="mySlides" src="hunter.png" style="width:100%">
+  <img class="mySlides" src="cuny.png" style="width:100%">
+  <img class="mySlides" src="gratuation.png" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
 </nav>
 
 <!-- Overlay effect when opening sidebar on small screens -->
